@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<navlang="ps">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> حضرت علي الفت</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="continaer">
+    <header>
+        <h1>حضرت علي الفت</h1>
+        <p>ویب ډیویلپر | فرېلانس | ډیزاینر</p>
+
+        <nav>
+            <ul>
+                <li><a href="uu.html">پروفايل</a></li>
+                 <li><a href="#contact">اړیکه</a></li>
+                <li><a href="#portfolio">پروژې</a></li>
+                <li><a href="uu.html">زما په اړه</a></li>
+                <li><a href="home.html">کور</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+   
+<div class="main">
+    <div class="section-content">
+        <section id="about">
+        <h2>زما په اړه</h2>
+        <p>زه حضرت علي یم. یو ویب ډیویلپر یم. 
+            زه به لاندی برخو کې خدمات وړاندی کوم:
+            PHP,HTML,CSS ...
+        </p>
+        </section>
+    
+        <section id="portfolio">
+        <h2>زما پروژې</h2>
+        <div class="project">
+            <h3>د کاروباري ویب‌سایټ پروژه</h3>
+            <p>یو مسلکي ویب‌سایټ چې د کوچنیو کاروبارونو لپاره جوړ شوی.</p>
+        </div>
+        <div class="project">
+            <h3>ای کامرس ویب‌سایټ</h3>
+            <p>په کارولو جوړ دي(MySQL) او (PHP)يو انلاين دوکان چې د</p>
+        </div>
+        </section>
+    
+     <section id="contact">
+        <h2>اړیکه</h2>
+        <p>زه همیشه تیار یم چې ستاسو لپاره یو غوره ویب‌سایټ جوړ کړم. له ما سره اړیکه ونیسئ!</p>
+        <form action="contact.php" method="POST">
+            <label for="name">نوم:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">پیغام:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">لیږل</button>
+        </form>
+        </section>
+    </div>
+    <div class="cards-content">
+         <div class="cards">
+            <h2><li><a href="News">News</a></li></h2>
+            <img src="cover.jpg" alt="">
+            <button class="like-btn" onclick="likePost(this)">لایک ❤️</button>
+            <button class="comment-btn" onclick="toggleCommentBox(this)">کمینټ ✍️</button>
+             <label><li><a href="" download="download">Download</a></li></label>
+        </div>
+        <div class="cards">
+            <h2><li><a href="News">News</a></li></h2>
+            <img src="cover.jpg" alt="">
+            <button class="like-btn" onclick="likePost(this)">لایک ❤️</button>
+            <button class="comment-btn" onclick="toggleCommentBox(this)">کمینټ ✍️</button>
+        
+             <label><li><a href="" download="download">Download</a></li></label>
+        </div>
+        <div class="cards">
+            <h2><li><a href="News">News</a></li></h2>
+            <img src="cover.jpg" alt="">
+            <button class="like-btn" onclick="likePost(this)">لایک ❤️</button>
+            <button class="comment-btn" onclick="toggleCommentBox(this)">کمینټ ✍️</button>
+        
+             <label><li><a href="" download="download">Download</a></li></label>
+        </div>
+         <div class="cards">
+             <h2><li><a href="News">News</a></li></h2>
+            <img src="cover.jpg" alt="">
+            <button class="like-btn" onclick="likePost(this)">لایک ❤️</button>
+            <button class="comment-btn" onclick="toggleCommentBox(this)">کمینټ ✍️</button>
+        
+             <label><li><a href="" download="download">Download</a></li></label>
+        </div>
+        <div class="cards">
+            <h2><li><a href="News">News</a></li></h2>
+            <img src="cover.jpg" alt="">
+            <button class="like-btn" onclick="likePost(this)">لایک ❤️</button>
+            <button class="comment-btn" onclick="toggleCommentBox(this)">کمینټ ✍️</button>
+        
+             <label><li><a href="" download="download">Download</a></li></label>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <footer>
+        <p>&copy; 2025 حضرت علي الفت - ټول حقوق محفوظ دي.</p>
+    </footer>
+</div>
+
+</div>
+<script>
+    function likePost(button) {
+        let likes = button.innerText.match(/\d+/);
+        likes = likes ? parseInt(likes[0]) + 1 : 1;
+        button.innerText = `لایک ❤️ (${likes})`;
+    }
+
+    function toggleCommentBox(button) {
+        let commentBox = button.nextElementSibling;
+        commentBox.style.display = commentBox.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
